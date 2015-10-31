@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class Board {
 	
-	private int boardNo;
+	private long boardNo;
 	private String title;
 	private String contents;
 	private int userNo;
@@ -12,11 +12,11 @@ public class Board {
 	private Date updateDate;
 	private int hit;
 	
-	public int getBoardNo() {
+	public long getBoardNo() {
 		return boardNo;
 	}
-	public void setBoardNo(int boardNo) {
-		this.boardNo = boardNo;
+	public void setBoardNo(long boardNo2) {
+		this.boardNo = boardNo2;
 	}
 	public String getTitle() {
 		return title;

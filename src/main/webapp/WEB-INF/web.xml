@@ -11,7 +11,7 @@
 -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpth:/spring/applicationContext-root.xml</param-value>
+    <param-value>classpath:/spring/applicationContext-root.xml</param-value>
   </context-param>
   
   <listener>

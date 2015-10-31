@@ -9,13 +9,17 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.cdg.merry.domain.Board;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring/applicationContext-root.xml")
+@Transactional(transactionManager = "transactionManager")
+@Rollback(true)	//db에는 뜨지 않음.
 public class BoardMapperTest {
 
 	@Autowired
@@ -67,6 +71,7 @@ public class BoardMapperTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testDeleteBoard() throws Exception {
 		//Given
 		
